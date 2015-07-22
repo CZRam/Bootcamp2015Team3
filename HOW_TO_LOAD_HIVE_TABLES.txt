@@ -1,0 +1,15 @@
+--1. Share a folder as a permanent folder on your local drive to your Virtual box
+--1a. Settings, Sharing, select a folder (i.e. Downloads)
+--1b. This will make a mapped folder in the virtual box prefixed with 'sf_' for 'shared folder' (i.e. sf_/media/sf_Downloads)
+--2. Extract this bootcamp.zip file to this folder
+--3. ssh into the box (ssh root@127.0.0.1 -p 2222)
+--4. navigate to the shared folder and go into the bootcamp folder (/media/sf_Downloads/bootcamp)
+--5. run this command  ./load_tables.sh data
+--5a.  This will run and create the default tables and load in the data
+--6. once finished launch hive  (> hive)
+--7. after hive is up add the serde jar to hive by running this command: ADD JAR bootcamp-udf-serde.jar;
+--8. now you can query the adsb table (i.e select count(*) from adsb) => this should take about 75 seconds and return the following data:
+1015661
+Time taken: 76.302 seconds, Fetched: 1 row(s)
+
+
