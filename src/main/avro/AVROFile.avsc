@@ -1,0 +1,11 @@
+{"namespace": "com.team3.avro",
+ "type": "record",
+ "name": "AVROFile",
+ "fields": [
+     {"name": "username", "type": "string"},
+     {"name": "hostname", "type": "string"},
+     {"name": "filepath", "type": "string"},
+     {"name": "last_modified", "type": "long"},
+     {"name": "content", "type": "bytes"}     
+ ]
+}
