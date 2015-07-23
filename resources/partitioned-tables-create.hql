@@ -53,7 +53,8 @@ TBLPROPERTIES (
   'numRows'='-1', 
   'rawDataSize'='-1', 
   'totalSize'='55232666', 
-  'transient_lastDdlTime'='1437506974');
+  'transient_lastDdlTime'='1437506974',
+  'skip.header.line.count'='1');
 
 !echo "******* Creating Table default.acftref *******";
 
@@ -81,7 +82,8 @@ TBLPROPERTIES (
   'COLUMN_STATS_ACCURATE'='true', 
   'numFiles'='1', 
   'totalSize'='4740998', 
-  'transient_lastDdlTime'='1437453318');
+  'transient_lastDdlTime'='1437453318',
+  'skip.header.line.count'='1');
 
 !echo "******* Creating Table default.reserved *******";
 
