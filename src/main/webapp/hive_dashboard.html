@@ -1,0 +1,131 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="../../favicon.ico" rel="icon">
+
+    <title>Skynet Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="plugins/bootstrap/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="dashboard.css">
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">SKYNET</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" placeholder="Search..." class="form-control">
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div class=" container-fluid col-md-12">
+    <div class="row">
+        <div class="col-sm-2">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Export</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-10">
+            <div class="row placeholders">
+                <div class="col-sm-6 placeholder">
+                    <h3>Aircrafts w/o ADSB</h3>
+                    <div id="totals-piechart" style="width: 700px; height: 500px;">
+
+                    </div>
+                    <br/>
+                    <span style="font-size:12px">
+                        Profit based upon cost of $75,000, selling for $200,000
+                    </span>
+                </div>
+                <div class="col-sm-6 placeholder">
+                    <h3>Aircraft Types w/o ADSB</h3>
+                    <div id="totals-kind-piechart" style="width: 700px; height: 500px;">
+
+                    </div>
+                </div>
+        </div>
+
+            <div class="row placeholders">
+                <h3>Potential Market</h3>
+                <div class="col-sm-12 placeholder">
+                    <div id="current-mkt-barchart" style="width: 900px; height: 500px;">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row placeholders">
+                <div class="col-sm-12 placeholder">
+                    <h3>Contacts (Leads & Opportunities)</h3>
+                    <div id="current-mkt-table">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row placeholders">
+                <div class="col-sm-12 placeholder">
+                    <h3>Daily Flight Traffic</h3>
+                    <div id="flight-day-barchart">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/underscore/underscore-min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/moment/moment-duration-format.js"></script>
+
+<script src="js/Project.js"></script>
+<script>
+
+    var dashboard = new Project.FlightDashboard().load();
+</script>
+
+</body></html>
